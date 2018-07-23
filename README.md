@@ -1,3 +1,17 @@
+# Venues! Venues! Venues!
+
+One of React's insights is that your application - as presented to the user - should merely be a function of a certain set of state information. Huh? In math, `2 * 3` always equals 6. You can count on 6 always being the output of the function multiply(2,3). That's thinking *functionally*. In react we try to use `props` as much as possible: a component that only uses `props` is functional: if you feed it certain `props` values, you can reliably predict how it will display.
+
+`state` is the core starting information of your application. Imagine an app that displays concert venues in the Twin Cities. It needs to know which venues exist: that's the core `state` data of the application. The list of venues might be stored in a database, or an API. It changes over time. 
+
+We also add `state` when there's something that the user can change about the application by interacting with it. Consider this `state` data that comes from the user. In this application, we want to let the user select which city is used to higlight venues in that city. The application needs to keep track of which city the user selected by storing it in `state`.
+
+The top level of the application is the _brain_ of the app, getting initial `state` and managing when and how it changes. Limiting and clearly dictating when and how `state` can change protects your app from confusing problems. 
+
+The top level of the app is in charge of passing the right bits of state information to lower-level components as `props`. The actual display of the app in the browser is simply a representation of the `state` being passed down through the components as `props`. The lower components can likewise pass `props` to other components. Ultimately, the application is rendered to the user by all these components. It's a pure function of inital, high-level `state`, passed down as `props`.
+
+## create-react-app readme
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
