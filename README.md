@@ -2,7 +2,9 @@
 
 One of React's insights is that your application - as presented to the user - should merely be a function of a certain set of state information. Huh? In math, `2 * 3` always equals 6. You can count on 6 always being the output of the function multiply(2,3). That's thinking *functionally*. In react we try to use `props` as much as possible: a component that only uses `props` is functional: if you feed it certain `props` values, you can reliably predict how it will display.
 
-`state` is the core starting information of your application. Imagine an app that displays concert venues in the Twin Cities. It needs to know which venues exist: that's the core `state` data of the application. The list of venues might be stored in a database, or an API. It changes over time. 
+`state` is the core starting information of your application. Imagine an app that displays concert venues in the Twin Cities. It needs to know which venues exist: that's the core `state` data of the application. The list of venues might be stored in a database, or an API. It changes over time.
+
+We previously introduced the concept of *thinking functionally* by looking at [javascript's array functions](original-venues-code.js). This example app is the result of turning that code into a React application.
 
 We also add `state` when there's something that the user can change about the application by interacting with it. Consider this `state` data that comes from the user. In this application, we want to let the user select which city is used to higlight venues in that city. The application needs to keep track of which city the user selected by storing it in `state`.
 
